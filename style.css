@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utilities */
+.color-grey{
+    color: rgb(170, 170, 170);
+}
+
+.background-grey{
+    background-color: rgb(234, 234, 234);
+}
+
+
+.foto-profilo{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+
+.background{
+    width: 100vw;
+    height: 100vh;
+}
+
+.green-back{
+    background-color: rgb(0, 150, 136);
+    height: 20%;
+}
+
+.container-app{
+    width: 80%;
+    height: 90%;
+}
+
+.list-contact{
+    border: 1px solid black;
+    padding: 0;
+
+}
+
+.block-chat{
+    border: 1px solid black;
+    padding: 0;
+}
+
+.account{
+    height: 70px!important;
+}
+
+.impostazioni-utente{
+    margin-right: 10px;
+}
+
+.impostazioni-utente > i{
+    margin: 0 10px;
+}
+
+.notifiche-txt *{
+    margin-left: 10px!important;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.lente{
+    border-right: 1px solid rgb(251, 251, 251);
+}
+
+.search-contact{
+    height: 50px;
+    padding: 7px;
+}
+
+.search-contact > input{
+    border: unset;
+    outline: unset;
+}
+
+.name-contact{
+    margin-left: 5px;
+    width: 80%;
+}
+
+.name-contact .name-bold{
+    font-weight: 600;
+}
+
+.name-contact .small-txt{
+    color: rgb(191, 192, 194);
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.contact-list{
+    max-height: calc(100% - 190px);
+    overflow-y: scroll;
+}
