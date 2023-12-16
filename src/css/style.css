@@ -115,7 +115,7 @@
     height: calc(100% - 70px);
     background-image: url('../../other-img/immagine-sfondo.png');
     background-size: contain;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .emoji-mic{
