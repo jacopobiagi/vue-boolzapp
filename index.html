@@ -14,23 +14,25 @@
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 
     <!-- LINK CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 
     <title>whatsapp web</title>
 </head>
 <body>
+
     <!-- BLOCCO DI SFONDO -->
     <div class="background position-relative">
         <div class="green-back w-100"></div>
+        <div class="white-back w-100"></div>
 
         <!-- BLOCCO PRINCIPALE -->
-        <div class="container-app position-fixed top-50 start-50 translate-middle bg-white row">
+        <div class="container-app position-fixed top-50 start-50 translate-middle bg-white row" id="app">
 
             <!-- BLOCCO CONTATTI -->
             <div class="list-contact col-5 h-100">
 
                 <!-- sezione profilo -->
-                <div class="account d-flex justify-content-between background-grey">
+                <div class="account d-flex justify-content-between background-grey border-end">
 
                     <div class="profilo h-100 d-flex align-items-center">
                         <div class="foto-profilo">
@@ -67,140 +69,14 @@
                 </div>
 
                 <!-- ELENCO CONTATTI -->
-                <div class="contact-list d-flex flex-column">
-                    <div class="account d-flex align-items-center w-100 border-bottom">
+                <div class="contact-list">
+                    <div class="account d-flex align-items-center w-100 border-bottom" v-for="user in contact">
                         <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column h-100">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
+                            <img :src="user.avatar" alt="av1" class="w-100 h-100 rounded-circle">
                         </div>
                         <div class="name-contact d-flex flex-column">
                             <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
-                                <span class="small-txt">12:00</span>
-                            </div>
-                            <div>
-                                <span class="small-txt">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account d-flex align-items-center w-100 border-bottom">
-                        <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
-                        </div>
-                        <div class="name-contact d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                                <span class="name-bold">Michele</span>
+                                <span class="name-bold">{{user.name}}</span>
                                 <span class="small-txt">12:00</span>
                             </div>
                             <div>
@@ -212,8 +88,61 @@
             </div>
 
             <!-- BLOCCO CHAT -->
-            <div class="block-chat col-7">
-                
+            <div class="block-chat col-7 position-relative">
+                <div class="account d-flex justify-content-between w-100 background-grey">
+                    <div class="h-100 d-flex align-items-center">
+                        <div class="foto-profilo">
+                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span class="name-bold">
+                                Michele
+                            </span>
+                            <span class="small-txt">
+                                Ultimo accesso oggi alle 12
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="impostazioni-utente h-100 d-flex align-items-center">
+                        <i class="fa-solid fa-magnifying-glass color-grey fa-lg"></i>
+                        <i class="fa-solid fa-paperclip color-grey fa-lg"></i>
+                        <i class="fa-solid fa-ellipsis-vertical color-grey fa-lg"></i>
+                    </div>
+                </div>
+
+                <div class="main-chat">
+                    <div class="green-message d-flex flex-column align-items-end position-relative">
+                        <div class="green-text d-flex justify-content-center flex-wrap">      
+                            ciaooooo
+                            <div class="orario d-flex align-items-end justify-content-end">
+                                <span style="font-size: 0.6em;">12:00</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="white-message d-flex">
+                        <div class="white-text bg-white">
+                            ciao meeeee!!!!
+                            <div class="orario d-flex align-items-end justify-content-end">
+                                <span style="font-size: 0.6em;">12:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-footer d-flex justify-content-between position-absolute bottom-0 account w-100" style="background-color: rgb(243, 238, 234);">
+                    <div class="emoji-mic d-flex align-items-center justify-content-center h-100">
+                        <i class="fa-regular fa-face-smile color-grey fa-lg"></i>
+                    </div>
+                    <div class="tastiera">
+                        <input type="text" class="w-100 h-100 bg-white border-0 rounded" placeholder=" Scrivi un messaggio">
+                    </div>
+                    <div class="emoji-mic d-flex align-items-center justify-content-center h-100">
+                        <i class="fa-solid fa-microphone fa-xl color-grey"></i>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -221,6 +150,6 @@
 
 
     <!-- LINK JS -->
-    <script src="script.js"></script>
+    <script type="module" src="./src/controller/script.js"></script>
 </body>
 </html>

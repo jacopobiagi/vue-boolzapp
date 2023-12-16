@@ -31,24 +31,28 @@
     height: 20%;
 }
 
+.white-back{
+    height: 80%;
+    background-color: rgb(215, 219, 214);
+}
+
 .container-app{
     width: 80%;
     height: 90%;
 }
 
 .list-contact{
-    border: 1px solid black;
     padding: 0;
 
 }
 
 .block-chat{
-    border: 1px solid black;
     padding: 0;
 }
 
 .account{
     height: 70px!important;
+    border-color: rgb(248, 248, 248);
 }
 
 .impostazioni-utente{
@@ -84,11 +88,13 @@
     width: 80%;
 }
 
-.name-contact .name-bold{
+.name-bold{
+    margin-left: 5px;
     font-weight: 600;
 }
 
-.name-contact .small-txt{
+.small-txt{
+    margin-left: 5px;
     color: rgb(191, 192, 194);
     font-size: 0.8em;
     font-weight: 400;
@@ -97,4 +103,51 @@
 .contact-list{
     max-height: calc(100% - 190px);
     overflow-y: scroll;
+}
+
+/* css chat principale */
+
+.main-chat{
+    height: calc(100% - 70px);
+    background-image: url('../../other-img/immagine-sfondo.png');
+    background-size: contain;
+    overflow-y: auto;
+}
+
+.emoji-mic{
+    width: 15%;
+}
+
+.tastiera{
+    width: 70%;
+    padding: 5px 0;
+}
+
+.tastiera input{
+    outline: unset;
+}
+
+.green-text{
+    max-width: 36%;
+    background-color: rgb(213, 249, 186);
+    margin-right: 7%;
+}
+
+.white-text{
+    margin-left: 7%;
+}
+
+.green-text, .white-text{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main-chat > div{
+    padding: 10px;
+    min-height: 60px;
+}
+
+.orario{
+    min-width: 40px;
+    padding-top: 5px;
 }
