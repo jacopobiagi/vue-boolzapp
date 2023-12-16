@@ -70,7 +70,7 @@
 
                 <!-- ELENCO CONTATTI -->
                 <div class="contact-list">
-                    <div class="account d-flex align-items-center w-100 border-bottom" v-for="user in contact">
+                    <div class="account d-flex align-items-center w-100 border-bottom" v-for="user in contact" @click="selezionaChat(user.index)">
                         <div class="foto-profilo">
                             <img :src="user.avatar" alt="av1" class="w-100 h-100 rounded-circle">
                         </div>
@@ -92,11 +92,11 @@
                 <div class="account d-flex justify-content-between w-100 background-grey">
                     <div class="h-100 d-flex align-items-center">
                         <div class="foto-profilo">
-                            <img src="avatar-boolzap/avatar_1.jpg" alt="av1" class="w-100 h-100 rounded-circle">
+                            <img :src="contact[indiceChat].avatar" alt="av1" class="w-100 h-100 rounded-circle">
                         </div>
                         <div class="d-flex flex-column">
                             <span class="name-bold">
-                                Michele
+                                {{contact[indiceChat].name}}
                             </span>
                             <span class="small-txt">
                                 Ultimo accesso oggi alle 12
@@ -112,21 +112,23 @@
                 </div>
 
                 <div class="main-chat">
-                    <div class="green-message d-flex flex-column align-items-end position-relative">
-                        <div class="green-text d-flex justify-content-center flex-wrap">      
-                            ciaooooo
-                            <div class="orario d-flex align-items-end justify-content-end">
-                                <span style="font-size: 0.6em;">12:00</span>
+                    <div v-for="sms in contact[indiceChat].messages">
+
+                        <div v-if="sms.status == 'sent' " class="green-message d-flex flex-column align-items-end position-relative">
+                            <div class="d-flex flex-wrap">      
+                                {{sms.message}}
+                                <div class="orario d-flex align-items-end justify-content-end">
+                                    <span style="font-size: 0.6em;">12:00</span>
+                                </div>
                             </div>
                         </div>
-                        
-                    </div>
 
-                    <div class="white-message d-flex">
-                        <div class="white-text bg-white">
-                            ciao meeeee!!!!
-                            <div class="orario d-flex align-items-end justify-content-end">
-                                <span style="font-size: 0.6em;">12:00</span>
+                        <div v-else class="white-message d-flex">
+                            <div class="d-flex">
+                                {{sms.message}}
+                                <div class="orario d-flex align-items-end justify-content-end">
+                                    <span style="font-size: 0.6em;">12:00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
