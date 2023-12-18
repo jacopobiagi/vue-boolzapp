@@ -65,12 +65,12 @@
                     <div class="lente h-100 w-25 d-flex align-items-center justify-content-center bg-white border-end">
                         <i class="fa-solid fa-magnifying-glass color-grey" style="font-size: 1em;"></i>
                     </div>
-                    <input type="text" placeholder=" Cerca o inizia una nuova chat" class="h-100 w-75">
+                    <input type="text" v-model="srcMessage" placeholder=" Cerca o inizia una nuova chat" class="h-100 w-75" @input="selContact">
                 </div>
 
                 <!-- ELENCO CONTATTI -->
                 <div class="contact-list">
-                    <div class="account d-flex align-items-center w-100 border-bottom" v-for="user in contact" @click="selezionaChat(user.index)">
+                    <div class="account d-flex align-items-center w-100 border-bottom" v-for="user in srContact" @click="selezionaChat(user.index)">
                         <div class="foto-profilo">
                             <img :src="user.avatar" alt="av1" class="w-100 h-100 rounded-circle">
                         </div>
@@ -153,5 +153,6 @@
 
     <!-- LINK JS -->
     <script type="module" src="./src/controller/script.js"></script>
+
 </body>
 </html>
