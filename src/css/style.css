@@ -189,7 +189,7 @@
 }
 
 @media screen and (max-width:630px){
-    .name-contact, .notifiche-txt, .cerca-contatto{
+    .name-contact, .notifiche-txt, .cerca-contatto,.mioNome{
         display: none!important;
     }
     .lente{
