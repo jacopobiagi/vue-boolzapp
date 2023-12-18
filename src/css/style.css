@@ -146,6 +146,7 @@
 .green-message > div, .white-message > div{
     padding: 10px;
     border-radius: 10px;
+    max-width: 320px;
 }
 
 .main-chat > div{
@@ -156,4 +157,52 @@
 .orario{
     min-width: 40px;
     padding-top: 5px;
+}
+
+/*responsive*/
+@media  screen and (max-width:1000px) {
+    .container-app{
+        width: 100vw;
+        height: 100vh;
+        margin-left: 2px;
+        position: relative!important;
+        margin: 0;
+    }
+    .green-back{
+        height: 0;
+    }
+    .white-back{
+        height: 0;
+    }
+}
+
+@media screen and (max-width:700px){
+    .lente,.small-txt,.ricevi,.impostazioni-utente{
+        display: none!important;
+    }
+    .oggetto-nascosto{
+        display: flex!important;
+    }
+    .cerca-contatto{
+        width: 100%!important;
+    }
+}
+
+@media screen and (max-width:630px){
+    .name-contact, .notifiche-txt, .cerca-contatto{
+        display: none!important;
+    }
+    .lente{
+        display: flex!important;
+        width: 100%!important;
+    }
+    .list-contact{
+        width: 95px!important;
+    }
+    .block-chat{
+        width: calc(100% - 95px);
+    }
+    .green-message > div, .white-message > div{
+        max-width: 200px;
+    }
 }
