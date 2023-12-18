@@ -42,9 +42,8 @@ createApp({
             this.myMessage = "";
         },
 
-        selContact(srcMessage){
-            this.srContact = this.contact.filter(contactItem => contactItem.name.includes(srcMessage));
-            console.log(this.srContact)
+        selContact(){
+            this.srContact = this.contact.filter(contactItem => contactItem.name.toLowerCase().includes(this.srcMessage.toLowerCase()));
         }
         
     } 
