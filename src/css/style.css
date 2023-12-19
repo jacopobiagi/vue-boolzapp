@@ -129,6 +129,7 @@
 
 .tastiera input{
     outline: unset;
+    padding: 10px;
 }
 
 .green-message > div{
