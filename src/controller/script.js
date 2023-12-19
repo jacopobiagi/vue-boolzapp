@@ -11,7 +11,8 @@ createApp({
             otherSms : 'white-message d-flex',
             indiceChat : 0,
             myMessage : "",
-            srcMessage: ""
+            srcMessage: "",
+            plane: false
         }
     },
     methods: {
@@ -44,10 +45,19 @@ createApp({
             
 
             this.myMessage = "";
+            this.plane = false;
         },
 
         selContact(){
             this.srContact = this.contact.filter(contactItem => contactItem.name.toLowerCase().includes(this.srcMessage.toLowerCase()));
+        },
+
+        ablePlane(){
+            if(this.myMessage){
+                this.plane = true;
+            }else{
+                this.plane = false;
+            }
         }
         
     } 

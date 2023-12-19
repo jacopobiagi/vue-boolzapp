@@ -142,10 +142,11 @@
                         <i class="fa-regular fa-face-smile color-grey fa-lg"></i>
                     </div>
                     <div class="tastiera">
-                        <input type="text" v-model="myMessage" class="w-100 h-100 bg-white border-0 rounded" placeholder=" Scrivi un messaggio" @keyup.enter="invio(indiceChat)">
+                        <input type="text" v-model="myMessage" class="w-100 h-100 bg-white border-0 rounded" placeholder=" Scrivi un messaggio" @keyup.enter="invio(indiceChat)" @input="ablePlane">
                     </div>
                     <div class="emoji-mic d-flex align-items-center justify-content-center h-100">
-                        <i class="fa-solid fa-microphone fa-xl color-grey"></i>
+                        <i class="fa-solid fa-microphone fa-xl color-grey" v-if="!plane"></i>
+                        <i class="fa-solid fa-paper-plane fa-xl color-grey" v-else @click="invio(indiceChat)"></i>
                     </div>
                 </div>
             </div>
