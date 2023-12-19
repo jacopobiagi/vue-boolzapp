@@ -32,11 +32,15 @@ createApp({
                 status: 'received'
             }
 
-            this.contact[contatto].messages.push(myText);
+            if(this.myMessage){
+                
+                this.contact[contatto].messages.push(myText);
 
-            setTimeout(() => {
-                this.contact[contatto].messages.push(contactText);
-            }, 1000);
+                setTimeout(() => {
+                    this.contact[contatto].messages.push(contactText);
+                }, 1000);
+            }
+            
             
 
             this.myMessage = "";
